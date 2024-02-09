@@ -1,0 +1,185 @@
+/*#region banner image*/
+#BannerPic
+{
+    width: 100%;
+    display: block;
+}
+#BannerContainer {
+    position: relative;
+    width: 100%;
+}
+#BannerOverlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%; /* Cover the bottom half */
+    background: linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1)); /* Gradient from transparent to black */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+/*#endregion banner image*/
+.HeaderTitle
+{
+    font-family: 'Protest Guerrilla', sans-serif;
+    position: absolute;
+    top: 50%; /* Position the text in the middle vertically */
+    left: 50%; /* Position the text in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 5vw; /* Text size */
+    font-weight: bold; /* Text bold */
+    text-align: center; /* Center-align the text */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    width: 50%;
+}
+/*#region animations*/
+@keyframes moveUpDown {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 9%; /* Move halfway */
+    }
+    100% {
+        top: 18%; /* Move back to the starting position */
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    100% {
+        opacity: 0.5; /* Semi-transparent */
+    }
+}
+/*#endregion animations*/
+/*#region button image, text and containers behaviors*/
+.button-container-horizontal {
+    position: relative;
+    display: inline-block;
+}
+.button-container-vertical {
+    position: relative;
+}
+.Button-Overlay-text {
+    text-decoration: none;
+    position: absolute;
+    top: 48%; /* Position the text 50% from the top of the button container */
+    left: 50%; /* Position the text in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 20px; /* Text size */
+    font-weight: bold; /* Text bold */
+    text-align: center; /* Center-align the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add shadow to the text */
+}
+.ButtonImage{
+    width: 200px; /* Set the width of the button image */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+/*#endregion button image, text and containers behaviors*/
+/*#region main*/
+main
+{   
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url(Imagenes/InterfaceItems/rockersands_seamless_circuit_background_texture_cyberpunk_a28118bc-9e8a-456c-b301-15588a7390d1.png); /* Specify the path to your background image */
+    background-repeat: repeat; /* Repeat the background image both vertically and horizontally */
+    background-size: auto; /* Automatically size the background image to its original dimensions */
+    
+}
+#mainColorTransitionContainer
+{
+    position: relative;
+    width: 100%;
+}
+#mainColorTransitionObject
+{
+    position:block;
+    bottom: 0;
+    width: 100%;
+    height: 10px; /* Cover the bottom half */
+    background: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0)); /* Gradient from transparent to black */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+/*#endregion main*/
+/*#region navigation bar */
+.Navegacion
+{
+    background-color: black;
+    text-align: center;
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+.Navegacion li
+{
+    display: inline-block;
+    padding-inline: 5%;
+    transition: opacity 0.5s ease;
+}
+.Navegacion li:hover
+{
+    opacity: .7;    
+}
+
+/*#endregion navigation bar  */
+/*#region overlaying image over background image */
+#neonframe
+{
+    height: 100%;
+    position: absolute;
+    animation: fade .8s ease-in-out infinite alternate; /* Change the duration and timing function as needed */
+}
+.Overlay-image
+{
+    position: absolute; /* Position the overlay image absolutely */
+    top: 0; /* Align the top of the overlay with the top of the container */
+    left: 0; /* Align the left of the overlay with the left of the container */
+    z-index: 1;
+}
+#backgroundBodyImage
+{
+    height: 100%;
+    border: 5px;
+}
+.imageWithBackgroundContainer
+{    
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+/*#endregion overlaying image over background image */
+
+#exoShell
+{
+    border-image-outset: 20px;
+    height: 60%;
+    top: 22%;
+    left: 31%;
+    display: inline-block; 
+    animation: moveUpDown 1s ease-in-out infinite alternate; /* Change the duration and timing function as needed */
+}
+
+#assemblyBody
+{
+    height: 60%;
+    display: inline-block;
+    left: 25%;
+    top: 22%;
+    animation: moveUpDown 1s ease-in-out infinite alternate; /* Change the duration and timing function as needed */
+}
+.BodyProductList
+{
+    display: inline-block;
+    height: 100%;
+    width: auto;
+}
+.BodyProduct
+{
+    display: block;
+    height: 400px;
+    margin-inline: auto;
+    padding-left: 3%;
+    padding-top: 3%;
+}
